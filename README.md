@@ -8,7 +8,7 @@ Scraper.py does everything:
 All essential function calls in lines 194-197:
 
 194: reset_tables(): uncomment to prevent errors when you use different combinations of tickers with overlapping tickers
-on different days (may cause length isses). You definitely want this commented out if you want to continuosly build a database
+on different days (may cause length isses). You definitely want this commented out if you want to continuously build a database
 
 195: init_tables(): uncomment on inital run for each combo, otherwise leave commented out
 

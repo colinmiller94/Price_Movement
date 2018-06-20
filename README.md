@@ -8,6 +8,9 @@ Scraper.py does everything:
 All essential function calls in lines 194-197:
 194: reset_tables(): uncomment to prevent errors when you use different combinations of tickers with overlapping tickers
 on different days (may cause length isses)
+
 195: init_tables(): uncomment on inital run for each , otherwise leave commented out
+
 196: pull_data(): Adds to existing databases
+
 197: learn(): Classifies most recent date to make current prediciton, displays backtest results

@@ -21,12 +21,20 @@ test_set= {1:[], 0:[], -1:[]}
 
 #Most k_nearest code, including the majority of this function was taken from Sentdex's YouTube ML tutorial video series
 def k_nearest_neighbors(data, predict, k):
+    """
+    :param data: dictionary with up/down/sideways moves as keys (1,-1,0), list of other securities moves as values
+    :param predict: list of securities movements
+    :param k: number of neighbors to be used in classification
+    :return: vote_result: prediction of up/down/sideways; magnitude: fractional confidence of prediction
+    """
+    #print(predict)
     if len(data) >= k:
         warnings.warn('K is set to value of less than total voting groups')
 
     distances = []
     for group in data:
         for features in data[group]:
+            #print(features)
             euclidean_dist = np.linalg.norm(np.array(features) - np.array(predict))
             distances.append([euclidean_dist, group])
 
